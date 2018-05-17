@@ -1,10 +1,6 @@
 package pt.ua.ihc1718.musicapp;
 
-import android.app.SearchManager;
-import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.MenuItemCompat;
 import android.util.Log;
 import android.view.View;
@@ -16,13 +12,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import pt.ua.ihc1718.musicapp.model.Album;
+import pt.ua.ihc1718.musicapp.model.Artist;
+import pt.ua.ihc1718.musicapp.model.Track;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "MainActivity";
+
+    ImageView artist1Image;
+    TextView artist1Name;
+
+
+
+    List<Artist> artistList = new ArrayList<>();
+    List<Track> trackList = new ArrayList<>();
+    List<Album> albumList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +55,16 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        init();
+    }
+
+    private void init() {
+        artist1Image = (ImageView) findViewById(R.id.artist1Image);
+        artist1Image.setImageResource(R.drawable.); // falta o nome do ficheiro
+
+        artist1Name = (TextView) findViewById(R.id.artist1Name);
+        artist1Name.setText(artistList.get(0).getName());
     }
 
     @Override
@@ -126,5 +150,11 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void onArtistClick(View view) {
+        Integer artistIdx = (Integer) view.getTag();
+
+
     }
 }
