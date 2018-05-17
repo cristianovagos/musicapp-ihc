@@ -1,5 +1,6 @@
 package pt.ua.ihc1718.musicapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.util.Log;
@@ -61,10 +62,10 @@ public class MainActivity extends AppCompatActivity
 
     private void init() {
         artist1Image = (ImageView) findViewById(R.id.artist1Image);
-        artist1Image.setImageResource(R.drawable.); // falta o nome do ficheiro
+        //artist1Image.setImageResource(R.drawable.); // falta o nome do ficheiro
 
-        artist1Name = (TextView) findViewById(R.id.artist1Name);
-        artist1Name.setText(artistList.get(0).getName());
+        //artist1Name = (TextView) findViewById(R.id.artist1Name);
+        //artist1Name.setText(artistList.get(0).getName());
     }
 
     @Override
@@ -155,6 +156,6 @@ public class MainActivity extends AppCompatActivity
     public void onArtistClick(View view) {
         Integer artistIdx = (Integer) view.getTag();
 
-
+        startActivity(new Intent(MainActivity.this, ArtistActivity.class));
     }
 }
