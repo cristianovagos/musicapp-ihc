@@ -2,7 +2,9 @@ package pt.ua.ihc1718.musicapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -17,17 +19,25 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "MainActivity";
 
+    private ViewPager viewPager;
+    ImageSliderAdapter imageSliderAdapter;
+    Timer timer;
+    int page = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -41,11 +51,32 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        init();
+        viewPager = (ViewPager) findViewById(R.id.newsSlider);
+        imageSliderAdapter = new ImageSliderAdapter(this);
+        viewPager.setAdapter(imageSliderAdapter);
+        pageSwitcher(4);
     }
 
-    private void init() {
+    public void pageSwitcher(int seconds) {
+        timer = new Timer(); // At this line a new Thread will be created
+        timer.scheduleAtFixedRate(new RemindTask(), 0, seconds * 1000); // delay in milliseconds
+    }
 
+    // this is an inner class...
+    class RemindTask extends TimerTask {
+        @Override
+        public void run() {
+            runOnUiThread(new Runnable() {
+                public void run() {
+                    if (page > 2) {
+                        page = 0;
+                        viewPager.setCurrentItem(page);
+                    } else {
+                        viewPager.setCurrentItem(page++);
+                    }
+                }
+            });
+        }
     }
 
     @Override
