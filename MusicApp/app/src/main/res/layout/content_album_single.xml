@@ -7,7 +7,7 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_album">
+    tools:showIn="@layout/app_bar_album_single">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -579,5 +579,9 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <!-- Resultados da pesquisa -->
+
+    <include layout="@layout/search_results"/>
 
 </LinearLayout>

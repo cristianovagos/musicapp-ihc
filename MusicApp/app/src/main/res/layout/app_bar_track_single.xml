@@ -26,7 +26,7 @@
         android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <include layout="@layout/content_track" />
+        <include layout="@layout/content_track_single" />
 
     </android.support.v4.widget.NestedScrollView>
 

@@ -18,26 +18,10 @@ import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import pt.ua.ihc1718.musicapp.model.Album;
-import pt.ua.ihc1718.musicapp.model.Artist;
-import pt.ua.ihc1718.musicapp.model.Track;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "MainActivity";
-
-    ImageView artist1Image;
-    TextView artist1Name;
-
-
-
-    List<Artist> artistList = new ArrayList<>();
-    List<Track> trackList = new ArrayList<>();
-    List<Album> albumList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,11 +45,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void init() {
-        artist1Image = (ImageView) findViewById(R.id.artist1Image);
-        //artist1Image.setImageResource(R.drawable.); // falta o nome do ficheiro
 
-        //artist1Name = (TextView) findViewById(R.id.artist1Name);
-        //artist1Name.setText(artistList.get(0).getName());
     }
 
     @Override
@@ -154,8 +134,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void onArtistClick(View view) {
-        Integer artistIdx = (Integer) view.getTag();
-
         startActivity(new Intent(MainActivity.this, ArtistActivity.class));
     }
 }

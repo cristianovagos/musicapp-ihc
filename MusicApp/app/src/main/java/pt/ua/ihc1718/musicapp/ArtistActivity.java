@@ -1,9 +1,10 @@
 package pt.ua.ihc1718.musicapp;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -22,14 +23,19 @@ public class ArtistActivity extends AppCompatActivity
 
     private static final String TAG = "ArtistActivity";
 
+    CollapsingToolbarLayout collapsingToolbarLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_artist);
-
+        setContentView(R.layout.activity_artist_single);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbar);
+        collapsingToolbarLayout.setTitle("Metallica");
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.white));
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -57,7 +63,18 @@ public class ArtistActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.options_menu, menu);
 
         MenuItem searchViewItem = menu.findItem(R.id.search);
+
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchViewItem);
+
+        searchView.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onMenuItemClick: clicked");
+
+                AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar_layout);
+                appBarLayout.setExpanded(false);
+            }
+        });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -120,6 +137,12 @@ public class ArtistActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+
+        switch (id) {
+            case R.id.nav_albuns:
+                startActivity(new Intent(ArtistActivity.this, AlbumActivity.class));
+                break;
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

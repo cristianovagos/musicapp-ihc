@@ -7,111 +7,44 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_artist_single">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="15dp">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/artistLogo"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:src="@mipmap/ic_launcher_round"-->
+            <!--android:layout_centerHorizontal="true"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/artistName"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Nome do Artista"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:textSize="25sp"-->
+            <!--android:layout_below="@id/artistLogo"-->
+            <!--android:layout_centerHorizontal="true"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_star"-->
+            <!--android:layout_alignParentRight="true"/>-->
+
+    <!--</RelativeLayout>-->
 
     <LinearLayout
         android:id="@+id/mainLayout"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TOP 3 Artistas"
-                android:textSize="20sp"
-                android:layout_gravity="center"/>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp">
-
-                <LinearLayout
-                    android:onClick="onArtistClick"
-                    android:tag="0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:id="@+id/artist1Image"
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:src="@drawable/acdc"
-                        android:scaleType="centerCrop"/>
-
-                    <TextView
-                        android:id="@+id/artist1Name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="AC/DC"
-                        android:textStyle="bold"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="center"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:onClick="onArtistClick"
-                    android:tag="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:src="@drawable/aerosmith"
-                        android:scaleType="centerCrop"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Aerosmith"
-                        android:textStyle="bold"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="center"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:onClick="onArtistClick"
-                    android:tag="2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:src="@drawable/disturbed"
-                        android:scaleType="centerCrop"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Disturbed"
-                        android:textStyle="bold"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="center"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -146,7 +79,7 @@
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:text="Its My Life"
+                        android:text="Faixa 1"
                         android:layout_marginLeft="15dp"
                         android:layout_weight="1"
                         android:layout_gravity="center_vertical"/>
@@ -154,43 +87,7 @@
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:text="Bon Jovi"
-
-                        android:layout_marginLeft="15dp"
-                        android:layout_weight="1"
-                        android:layout_gravity="center_vertical"/>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_play"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="#2"
-                        android:textSize="20dp"/>
-
-                    <TextView
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:text="Stairway to Heaven"
-                        android:layout_marginLeft="15dp"
-                        android:layout_weight="1"
-                        android:layout_gravity="center_vertical"/>
-
-                    <TextView
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:text="Led Zeppelin"
+                        android:text="Artista"
                         android:layout_marginLeft="15dp"
                         android:layout_weight="1"
                         android:layout_gravity="center_vertical"/>
@@ -211,13 +108,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="#3"
+                        android:text="#1"
                         android:textSize="20dp"/>
 
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:text="Learn to Fly"
+                        android:text="Faixa 1"
                         android:layout_marginLeft="15dp"
                         android:layout_weight="1"
                         android:layout_gravity="center_vertical"/>
@@ -225,7 +122,7 @@
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:text="Foo Fighters"
+                        android:text="Artista"
                         android:layout_marginLeft="15dp"
                         android:layout_weight="1"
                         android:layout_gravity="center_vertical"/>
@@ -246,13 +143,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="#4"
+                        android:text="#1"
                         android:textSize="20dp"/>
 
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:text="By The Way"
+                        android:text="Faixa 1"
                         android:layout_marginLeft="15dp"
                         android:layout_weight="1"
                         android:layout_gravity="center_vertical"/>
@@ -260,7 +157,42 @@
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:text="Red Hot Chili Peppers"
+                        android:text="Artista"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_play"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#1"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Faixa 1"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Artista"
                         android:layout_marginLeft="15dp"
                         android:layout_weight="1"
                         android:layout_gravity="center_vertical"/>
@@ -308,20 +240,10 @@
                         android:src="@mipmap/ic_launcher_round"/>
 
                     <TextView
-                        android:layout_width="90dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The Getaway"
-                        android:textAlignment="center"
-                        android:layout_marginTop="5dp"
-                        android:textStyle="bold"
-                        android:layout_gravity="center"/>
-
-                    <TextView
-                        android:layout_width="90dp"
-                        android:layout_height="wrap_content"
-                        android:text="Red Hot Chili Peppers"
-                        android:layout_marginTop="5dp"
-                        android:textAlignment="center"
+                        android:text="Artista 1"
+                        android:layout_marginTop="10dp"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>
@@ -335,23 +257,13 @@
                     <ImageView
                         android:layout_width="90dp"
                         android:layout_height="90dp"
-                        android:src="@drawable/queen_ii"/>
+                        android:src="@mipmap/ic_launcher_round"/>
 
                     <TextView
-                        android:layout_width="90dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Queen II"
-                        android:textAlignment="center"
-                        android:layout_marginTop="5dp"
-                        android:textStyle="bold"
-                        android:layout_gravity="center"/>
-
-                    <TextView
-                        android:layout_width="90dp"
-                        android:layout_height="wrap_content"
-                        android:text="Queen"
-                        android:layout_marginTop="5dp"
-                        android:textAlignment="center"
+                        android:text="Artista 2"
+                        android:layout_marginTop="10dp"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>
@@ -371,12 +283,33 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Artista 3"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>
 
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biografia"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec rutrum ex, eu tristique dui. Donec sed convallis justo, auctor luctus lacus. Pellentesque vel elit a dui convallis consectetur. Donec malesuada, erat at pellentesque semper, mauris ligula mattis ligula, eget porta urna nunc ac lectus. Maecenas et turpis justo. Mauris rhoncus porta fermentum. Proin ut lorem est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi neque ex, ultrices at euismod eget, egestas et neque. Aenean pulvinar est lacus, at mattis lacus iaculis ut. Phasellus diam leo, ornare sed augue quis, lacinia consequat libero. "/>
 
         </LinearLayout>
 

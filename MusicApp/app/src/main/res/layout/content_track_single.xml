@@ -7,7 +7,7 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_track">
+    tools:showIn="@layout/app_bar_track_single">
 
     <RelativeLayout
         android:layout_width="match_parent"
