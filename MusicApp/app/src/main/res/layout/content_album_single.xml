@@ -9,45 +9,45 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_album_single">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp">
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="15dp">-->
 
-        <ImageView
-            android:id="@+id/albumLogo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@mipmap/ic_launcher_round"
-            android:layout_centerHorizontal="true"/>
+        <!--<ImageView-->
+            <!--android:id="@+id/albumLogo"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:src="@mipmap/ic_launcher_round"-->
+            <!--android:layout_centerHorizontal="true"/>-->
 
-        <TextView
-            android:id="@+id/albumName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nome do Álbum"
-            android:layout_marginTop="10dp"
-            android:textSize="25sp"
-            android:layout_below="@id/albumLogo"
-            android:layout_centerHorizontal="true"/>
+        <!--<TextView-->
+            <!--android:id="@+id/albumName"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Nome do Álbum"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:textSize="25sp"-->
+            <!--android:layout_below="@id/albumLogo"-->
+            <!--android:layout_centerHorizontal="true"/>-->
 
-        <TextView
-            android:id="@+id/artistName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nome do Artista"
-            android:layout_marginTop="10dp"
-            android:textSize="15sp"
-            android:layout_below="@id/albumName"
-            android:layout_centerHorizontal="true"/>
+        <!--<TextView-->
+            <!--android:id="@+id/artistName"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Nome do Artista"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:textSize="15sp"-->
+            <!--android:layout_below="@id/albumName"-->
+            <!--android:layout_centerHorizontal="true"/>-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_star"
-            android:layout_alignParentRight="true"/>
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_star"-->
+            <!--android:layout_alignParentRight="true"/>-->
 
-    </RelativeLayout>
+    <!--</RelativeLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"

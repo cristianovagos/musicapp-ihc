@@ -23,7 +23,7 @@ public class ArtistActivity extends AppCompatActivity
 
     private static final String TAG = "ArtistActivity";
 
-    CollapsingToolbarLayout collapsingToolbarLayout;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,23 +113,7 @@ public class ArtistActivity extends AppCompatActivity
             }
         });
 
-
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -139,8 +123,23 @@ public class ArtistActivity extends AppCompatActivity
         int id = item.getItemId();
 
         switch (id) {
+            case R.id.nav_home:
+                startActivity(new Intent(ArtistActivity.this, MainActivity.class));
+                break;
             case R.id.nav_albuns:
-                startActivity(new Intent(ArtistActivity.this, AlbumActivity.class));
+            case R.id.nav_meus_albuns:
+                startActivity(new Intent(ArtistActivity.this, AlbumsActivity.class));
+                break;
+            case R.id.nav_artistas:
+            case R.id.nav_meus_artistas:
+                startActivity(new Intent(ArtistActivity.this, ArtistsActivity.class));
+                break;
+            case R.id.nav_musicas:
+            case R.id.nav_minhas_musicas:
+                startActivity(new Intent(ArtistActivity.this, TracksActivity.class));
+                break;
+            case R.id.nav_signout:
+                finishAffinity();
                 break;
         }
 

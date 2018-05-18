@@ -23,6 +23,14 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".AlbumActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".AlbumsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".TrackActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".TracksActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ArtistsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

@@ -2,42 +2,31 @@ package pt.ua.ihc1718.musicapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.View;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-public class MainActivity extends AppCompatActivity
+public class ArtistsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private static final String TAG = "MainActivity";
-
-    private ViewPager viewPager;
-    private ImageSliderAdapter imageSliderAdapter;
-    private Timer timer;
-    private int page = 0;
+    private static final String TAG = "ArtistsActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_artists);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -50,33 +39,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        viewPager = (ViewPager) findViewById(R.id.newsSlider);
-        imageSliderAdapter = new ImageSliderAdapter(this);
-        viewPager.setAdapter(imageSliderAdapter);
-        pageSwitcher(4);
-    }
-
-    public void pageSwitcher(int seconds) {
-        timer = new Timer(); // At this line a new Thread will be created
-        timer.scheduleAtFixedRate(new RemindTask(), 0, seconds * 1000); // delay in milliseconds
-    }
-
-    // this is an inner class...
-    class RemindTask extends TimerTask {
-        @Override
-        public void run() {
-            runOnUiThread(new Runnable() {
-                public void run() {
-                    if (page > 2) {
-                        page = 0;
-                        viewPager.setCurrentItem(page);
-                    } else {
-                        viewPager.setCurrentItem(page++);
-                    }
-                }
-            });
-        }
     }
 
     @Override
@@ -95,7 +57,9 @@ public class MainActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.options_menu, menu);
 
         MenuItem searchViewItem = menu.findItem(R.id.search);
+
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchViewItem);
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -138,6 +102,21 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -145,17 +124,16 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         switch (id) {
+            case R.id.nav_home:
+                startActivity(new Intent(ArtistsActivity.this, MainActivity.class));
+                break;
             case R.id.nav_albuns:
             case R.id.nav_meus_albuns:
-                startActivity(new Intent(MainActivity.this, AlbumsActivity.class));
-                break;
-            case R.id.nav_artistas:
-            case R.id.nav_meus_artistas:
-                startActivity(new Intent(MainActivity.this, ArtistsActivity.class));
+                startActivity(new Intent(ArtistsActivity.this, AlbumsActivity.class));
                 break;
             case R.id.nav_musicas:
             case R.id.nav_minhas_musicas:
-                startActivity(new Intent(MainActivity.this, TracksActivity.class));
+                startActivity(new Intent(ArtistsActivity.this, TracksActivity.class));
                 break;
             case R.id.nav_signout:
                 finishAffinity();
@@ -165,29 +143,5 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public void onArtistClick(View view) {
-        startActivity(new Intent(MainActivity.this, ArtistActivity.class));
-    }
-
-    public void onMoreArtistsClick(View view) {
-        startActivity(new Intent(MainActivity.this, ArtistsActivity.class));
-    }
-
-    public void onMoreTracksClick(View view) {
-        startActivity(new Intent(MainActivity.this, TracksActivity.class));
-    }
-
-    public void onMoreAlbumsClick(View view) {
-        startActivity(new Intent(MainActivity.this, AlbumsActivity.class));
-    }
-
-    public void onTrackClick(View view) {
-        startActivity(new Intent(MainActivity.this, TrackActivity.class));
-    }
-
-    public void onAlbumClick(View view) {
-        startActivity(new Intent(MainActivity.this, AlbumActivity.class));
     }
 }
