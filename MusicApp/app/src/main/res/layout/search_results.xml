@@ -190,88 +190,133 @@
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:orientation="vertical">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Faixas"
             android:textSize="17sp"/>
-
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp">
-
+            android:orientation="vertical">
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:src="@mipmap/ic_launcher_round"/>
-
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
                 <TextView
-                    android:onClick="onArtistClick"
-                    android:tag="10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Artista 1"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:src="@mipmap/ic_launcher_round"/>
-
+                    android:text="#1"
+                    android:textSize="20dp"/>
                 <TextView
-                    android:onClick="onArtistClick"
-                    android:tag="11"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Faixa 1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Artista"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"/>
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Artista 2"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"/>
-
+                    android:src="@drawable/ic_play"/>
             </LinearLayout>
-
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:src="@mipmap/ic_launcher_round"/>
-
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
                 <TextView
-                    android:onClick="onArtistClick"
-                    android:tag="12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Artista 3"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"/>
-
+                    android:text="#1"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Faixa 1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Artista"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_play"/>
             </LinearLayout>
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#1"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Faixa 1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Artista"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_play"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#1"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Faixa 1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="Artista"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_play"/>
+            </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 
 </LinearLayout>
