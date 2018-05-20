@@ -21,14 +21,14 @@
             android:src="@mipmap/ic_launcher_round"
             android:layout_centerHorizontal="true"/> -->
 
-        <TextView
+      <!--  <TextView
             android:id="@+id/albumName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Faixa"
             android:layout_marginTop="10dp"
             android:textSize="25sp"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"/> -->
 
 
         <ImageView
@@ -67,7 +67,7 @@
                 <TextView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:text="Nome"
+                    android:text="Eminem feat. Rihana"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"/>
@@ -96,7 +96,7 @@
                 <TextView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:text="Nome"
+                    android:text="Recovery"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"/>
@@ -120,7 +120,7 @@
                 <TextView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:text="Tempo"
+                    android:text="4:15"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"/>
@@ -142,7 +142,7 @@
                 <TextView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:text="Ano"
+                    android:text="2010"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"/>
@@ -164,7 +164,7 @@
                 <TextView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:text="Género"
+                    android:text="Hip-Hop, RnB"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"/>
@@ -186,7 +186,7 @@
                 <TextView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:text="Data"
+                    android:text="09/08/2010"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"/>
@@ -234,7 +234,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, \nconsectetur adipiscing elit. \nFusce varius ultrices dolor eget \nscelerisque. Nulla dictum turpis \n\nsem, vel semper metus \ntincidunt vitae. Pellentesque \niaculis dapibus urna, at \nmollis lectus fermentum \n\nvitae. Suspendisse eget \nultricies nisi, pharetra \negestas purus. Quisque \nfacilisis, erat ut \n\ntempus scelerisque, ante \nenim tristique metus, sollicitudin \ngravida mauris urna \nnon odio. Sed sit amet dictum \n\nmagna. Duis non sem volutpat, \nvestibulum sem non, \nconvallis ligula. \nNulla gravida volutpat lacus \n\nin porttitor. Pellentesque \nturpis neque, semper vel \nerat volutpat, tempus \nporttitor purus. Pellentesque \n\nhabitant morbi tristique \nsenectus et netus et\nmalesuada fames ac turpis\negestas. Pellentesque cursus\n\nultrices augue, in sagittis\nnisi semper blandit. Suspendisse \nnon purus ultricies, semper \nrisus vitae, fringilla ex."
+                android:text="Just gonna stand there\nAnd watch me burn\nBut that's alright\nBecause I like\nThe way it hurts\n Just gonna stand there\n And hear me cry\nBut that's alright\nBecause I love\nThe way you lie\nI love the way you lie\n\nI can't tell you what it really is\nI can only tell you what it feels like\nAnd right now it's a steel knife\nIn my windpipe\I can't breathe\nBut I still fight\nWhile I can fight\nAs long as the wrong feels right\nIt's like I'm in flight\nHigh off of love\nDrunk from my hate\nIt's like I'm huffing paint\nAnd I love it the more that I suffer\nI suffocate\nAnd right before I'm about to drown\nShe resuscitates me\nShe f***ing hates me\nAnd I love it\nWait\nWhere you going\nI'm leaving you\nNo you ain't\nCome back\nWe're running right back\nHere we go again\nIt's so insane\nCause when it's going good\nIt's going great\nI'm Superman\nWith the wind at his back\nShe's Lois Lane\nBut when it's bad\nIt's awful\nI feel so ashamed\nI snapped\nWho's that dude\nI don't even know his name\nI laid hands on her\nI'll never stoop so low again\nI guess I don't know my own strength\n\nJust gonna stand there\nAnd watch me burn\nBut that's alright\nBecause I like\nThe way it hurts\nJust gonna stand there\nAnd hear me cry\nBut that's alright\nBecause I love\nThe way you lie\nI love the way you lie\nI love the way you lie\n\nYou ever love somebody so much\nYou can barely breathe\nWhen you're with them\nYou meet\nAnd neither one of you\nEven know what hit 'em\nGot that warm fuzzy feeling\nYeah them chills\nUsed to get 'em\nNow you're getting f***ing sick\nOf looking at 'em\nYou swore you've never hit 'em\nNever do nothing to hurt 'em\nNow you're in each others face\nSpewing venom\nAnd these words\nWhen you spit 'em\nYou push\nPull each other's hair\nScratch, claw, bit 'em\nThrow 'em down\nPin 'em\nSo lost in the moments\nWhen you're in 'em\nIt's the rage that's the culprit\nIt controls you both\nSo they say it's best\nTo go your separate ways\nGuess that they don't know ya\nCause today\nThat was yesterday\nYesterday is over\nIt's a different day\nSound like broken records\nPlayin' over\nBut you promised her\nNext time you'll show restraint\nYou don't get another chance\nLife is no Nintendo game\nBut you lied again\nNow you get to watch her leave\nOut the window\nGuess that's why they call it window pane\n\nJust gonna stand there\nAnd watch me burn\nBut that's alright\nBecause I like\nThe way it hurts\nJust gonna stand there\nAnd hear me cry\nBut that's alright\nBecause I love\nThe way you lie\nI love the way you lie\n\nNow I know we said things\nDid things\nThat we didn't mean\nAnd we fall back\nInto the same patterns\nSame routine\nBut your temper's just as bad\nAs mine is\nYou're the same as me\nBut when it comes to love\nYou're just as blinded\nBaby please come back\nIt wasn't you\nBaby it was me\nMaybe our relationship\nIsn't as crazy as it seems\nMaybe that's what happens\nWhen a tornado meets a volcano\nAll I know is\nI love you too much\nTo walk away now\nCome inside\nPick up your bags off the sidewalk\nDon't you hear sincerity\nIn my voice when I talk\nTold you this is my fault\nLook me in the eyeball\nNext time I'm pissed\nI'll aim my fist\nAt the dry wall\nNext time\nThere will be no next time\nI apologize\nEven though I know it's lies\nI'm tired of the games\nI just want her back\nI know I'm a liar\nIf she ever tries to f***ing leave again\nI'm a tie her to the bed\nAnd set this house on fire\n\nJust gonna stand there\nAnd watch me burn\nBut that's alright\nBecause I like\nThe way it hurts\nJust gonna stand there\nAnd hear me cry\nBut that's alright\nBecause I love\nThe way you lie\nI love the way you lie\nI love the way you lie\n"
                 android:textSize="17sp"
                 android:layout_marginRight="5dp"/>
 
