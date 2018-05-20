@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
@@ -12,11 +13,13 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 public class AlbumActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,6 +27,7 @@ public class AlbumActivity extends AppCompatActivity
     private static final String TAG = "AlbumActivity";
 
     private CollapsingToolbarLayout collapsingToolbarLayout;
+    private boolean favorite = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,5 +151,23 @@ public class AlbumActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void favoriteToggle(View view) {
+        FloatingActionButton fab = (FloatingActionButton) view;
+        if(!favorite) {
+            fab.setImageResource(R.drawable.ic_star2);
+            favorite = true;
+            Toast.makeText(this, "Favorited!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            fab.setImageResource(R.drawable.ic_star);
+            favorite = false;
+            Toast.makeText(this, "No longer a favorite...", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void onArtistClick(View view) {
+        startActivity(new Intent(AlbumActivity.this, ArtistActivity.class));
     }
 }

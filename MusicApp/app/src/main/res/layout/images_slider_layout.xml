@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/newsImage"
         android:orientation="vertical"
-        android:background="#4000">
+        android:background="#7000">
 
         <TextView
             android:id="@+id/newsTitle"
@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:paddingEnd="20dp"
             android:paddingStart="20dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:textStyle="bold"
             android:textColor="@android:color/white"

@@ -144,4 +144,8 @@ public class ArtistsActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void onArtistClick(View view) {
+        startActivity(new Intent(ArtistsActivity.this, ArtistActivity.class));
+    }
 }
