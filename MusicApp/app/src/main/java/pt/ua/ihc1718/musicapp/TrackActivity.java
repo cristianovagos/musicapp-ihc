@@ -27,18 +27,20 @@ public class TrackActivity extends AppCompatActivity
 
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private boolean favorite = false;
+    private boolean playing = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_album_single);
+        setContentView(R.layout.activity_track_single);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbar);
-        collapsingToolbarLayout.setTitle("Greatest Hits");
+        collapsingToolbarLayout.setTitle("Love The Way You Lie");
         collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.white));
+        collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.ExpandedAppBar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -169,5 +171,23 @@ public class TrackActivity extends AppCompatActivity
 
     public void onArtistClick(View view) {
         startActivity(new Intent(TrackActivity.this, ArtistActivity.class));
+    }
+
+    public void onAlbumClick(View view) {
+        startActivity(new Intent(TrackActivity.this, AlbumActivity.class));
+    }
+
+    public void playToggle(View view) {
+        FloatingActionButton fab = (FloatingActionButton) view;
+        if(!playing) {
+            fab.setImageResource(R.drawable.ic_pause2);
+            playing = true;
+            Toast.makeText(this, "Playing...", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            fab.setImageResource(R.drawable.ic_play2);
+            playing = false;
+            Toast.makeText(this, "Pausing...", Toast.LENGTH_SHORT).show();
+        }
     }
 }

@@ -52,11 +52,24 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
         viewPager = (ViewPager) findViewById(R.id.newsSlider);
         imageSliderAdapter = new ImageSliderAdapter(this);
         viewPager.setAdapter(imageSliderAdapter);
         pageSwitcher(4);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(timer != null) {
+            timer.cancel();
+            timer = null;
+        }
     }
 
     public void pageSwitcher(int seconds) {

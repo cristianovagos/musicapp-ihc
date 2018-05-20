@@ -129,4 +129,8 @@ public class AlbumsActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void onArtistClick(View view) {
+        startActivity(new Intent(AlbumsActivity.this, ArtistActivity.class));
+    }
 }

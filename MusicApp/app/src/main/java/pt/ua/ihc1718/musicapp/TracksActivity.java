@@ -26,7 +26,7 @@ public class TracksActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_album_single);
+        setContentView(R.layout.activity_tracks);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -128,5 +128,13 @@ public class TracksActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void onTrackClick(View view) {
+        startActivity(new Intent(TracksActivity.this, TrackActivity.class));
+    }
+
+    public void onArtistClick(View view) {
+        startActivity(new Intent(TracksActivity.this, ArtistActivity.class));
     }
 }
